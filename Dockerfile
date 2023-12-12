@@ -1,0 +1,18 @@
+# syntax=docker/dockerfile:1
+
+FROM python:3.8
+
+WORKDIR /recommender-priyanshi
+
+COPY requirements.txt requirements.txt
+
+RUN pip3 install -r requirements.txt
+
+EXPOSE 8501
+
+COPY . .
+
+ENTRYPOINT [ "streamlit", "run" ]
+##CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+
+CMD ["streamlit_recommender.py"]
