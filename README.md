@@ -2,6 +2,8 @@
 
 ## Deployable model as a service
 
+**You must have docker daemon running in your local**
+
 * Build Docker Image
 
 `docker build --tag recommender-system .`
@@ -16,7 +18,7 @@
 
     ![streamlit app](streamlitapp-ui.jpeg)
 
-## GitRepo package contains
+## GitRepo package attachments
 
 * Datasets: `ratings.csv`, `movies.csv`, `tags.csv`, `links.csv` (provided in the assessment itself) `tmdb_metadata.csv` (created using script mentioned in the `data-analysis-report.ipynb` file)
 * Dockerfile
