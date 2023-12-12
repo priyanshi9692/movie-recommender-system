@@ -16,8 +16,13 @@
 
     ![streamlit app](streamlitapp-ui.jpeg)
 
-## Additional attachment
+## GitRepo package contains
 
-* Data analysis report (ipynb file is uploaded)
-* Business evaluation report
-* Community recommendation engine experiment report
+* Datasets: `ratings.csv`, `movies.csv`, `tags.csv`, `links.csv` (provided in the assessment itself) `tmdb_metadata.csv` (created using script mentioned in the `data-analysis-report.ipynb` file)
+* Dockerfile
+* requirements.txt
+* streamlit application code (`streamlit_recommender.py`)
+* flask API server code (`recommender_movie_rest_server.py`)
+* Data analysis report (ipynb file as well as pdf)
+* Business evaluation report (ipynb file as well as pdf)
+* Community recommendation engine experiment report (ipynb file as well as pdf)
