@@ -70,9 +70,9 @@ def get_movie_recommendations(user_id, model, n):
     all_movie_ids = ratings['movieId'].unique()
     user_rated_movies = ratings[ratings['userId'] == user_id]['movieId'].values
     user_unrated_movies = []
-    for i in all_movie_ids:
-        if i not in user_rated_movies:
-            user_unrated_movies.append(i)
+    for movie_id in all_movie_ids:
+        if movie_id not in user_rated_movies:
+            user_unrated_movies.append(movie_id)
 
     print(len(user_unrated_movies))
     # Predict ratings for unrated movies

@@ -14,7 +14,7 @@
 
 * Enter User Id for any user to see recommendation
 
-    [![streamlit app](streamlitapp-ui.jpeg)]
+    ![streamlit app](streamlitapp-ui.jpeg)
 
 ## Additional attachment
 

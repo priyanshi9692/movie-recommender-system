@@ -1,3 +1,7 @@
+"""
+Movie Recommender System Deployment using Streamlit application
+Author: Priyanshi Jajoo
+"""
 import pandas as pd
 import streamlit as st
 from joblib import load
@@ -31,18 +35,23 @@ def get_movie_recommendations(user_id, model, n=5):
     
     return top_movies_info
 
+"""
+    Display movie recommendations for a user entered through a Streamlit app.
 
+    A user-entered ID, retrieves movie recommendations using a pre-trained model,
+    and displays the top movie recommendations along with their ratings in a formatted table.
+
+    Usage:
+    1. Enter the user ID in the Streamlit app.
+    2. If a valid user ID is provided, the function fetches movie recommendations and displays them.
+    3. The table is styled for better readability.
+"""
 user_id = st.text_input(label="User Id")
 
 if user_id:
-    # recommendations = []
     recommendations = get_movie_recommendations(int(user_id), model, n=5)
     columns = ["Movies", "Ratings"]
-
-    # Create a Pandas DataFrame
     df = pd.DataFrame(recommendations, columns=columns)
-
-    # Display the DataFrame in Streamlit
     st.write("Top Movie Recommendations:")
     st.table(df.style.set_table_styles([{
         'selector': 'thead th',
@@ -50,6 +59,3 @@ if user_id:
     }]).set_properties(**{'text-align': 'center'}))
 else:
     st.write("Please enter your user id for your next movie recommendation :) ")
-
-
-
